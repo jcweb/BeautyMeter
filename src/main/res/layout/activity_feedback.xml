@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="ui"
+            type="cn.yaman.activity.center.FeedbackActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_horiz_divide" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/center_feedback_type"
+            android:textColor="@color/color_black_666"
+            android:textSize="@dimen/sp_18" />
+
+        <cn.yaman.view.TagFlowLayout
+            android:id="@+id/fl_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            app:max_select="1"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            ></cn.yaman.view.TagFlowLayout>
+        <include layout="@layout/include_horiz_divide" />
+        <EditText
+            android:id="@+id/td_feedback_iphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/stye_home_drawer_list_text"
+            android:textSize="@dimen/sp_16"
+            android:background="@color/transparent"
+            android:hint="@string/feedback_hint"/>
+        <include layout="@layout/include_horiz_divide" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/center_feedback_idea"
+            android:textColor="@color/color_black_666"
+            android:textSize="@dimen/sp_18" />
+
+        <EditText
+            android:id="@+id/et_feed_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="60dp"
+            android:maxLength="140"
+            android:textSize="@dimen/sp_16"
+            android:background="@color/transparent"
+            android:hint="@string/feedback_content_hint"
+            tools:ignore="Autofill" />
+
+        <include layout="@layout/include_horiz_divide" />
+        <TextView
+            android:id="@+id/tv_feedback_commit"
+            android:background="@drawable/text_button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:onClick="commitContent"
+            android:layout_margin="20dp"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="@string/feedback_content_commit" />
+    </LinearLayout>
+</layout>

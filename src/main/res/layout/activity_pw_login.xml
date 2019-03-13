@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="cn.yaman.activity.PwLoginActivity" />
+
+        <variable
+            name="type"
+            type="Integer" />
+
+        <variable
+            name="ui"
+            type="PwLoginActivity"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                android:text="@{type==PwLoginActivity.SET_PW?@string/user_passwd:@string/user_newpasswd}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_24" />
+
+
+
+                <EditText
+                    android:id="@+id/et_login_passwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="@string/user_passwd_hint"
+                    android:textSize="@dimen/sp_18"
+                    android:layout_marginTop="20dp"
+                    android:inputType="textPassword"
+                    tools:ignore="Autofill" />
+
+
+            <include layout="@layout/include_horiz_divide" />
+
+            <TextView
+                android:id="@+id/tv_user_login"
+                style="@style/button_submit"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/dp_00"
+                android:layout_marginEnd="@dimen/dp_00"
+                android:layout_marginTop="@dimen/dp_24"
+                android:textSize="@dimen/sp_18"
+                android:onClick="regist"
+                android:text="@string/user_login" />
+
+        </LinearLayout>
+
+</layout>

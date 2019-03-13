@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="cn.yaman.activity.UserPasswdActivity" />
+
+        <!--public static final int TYPE_REGIST = 0x01; // 注册-->
+        <!--public static final int TYPE_FORGET = 0x02; // 忘记密码-->
+
+        <variable
+            name="type"
+            type="Integer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_00"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                android:text="@{type == UserPasswdActivity.TYPE_REGIST  ? @string/user_passwd : @string/user_newpasswd}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_24" />
+
+            <EditText
+                android:id="@+id/et_user_passwd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@color/transparent"
+                android:hint="@string/user_passwd_hint"
+                android:inputType="textPassword"
+                android:textSize="@dimen/sp_14"
+                tools:ignore="Autofill" />
+
+            <include layout="@layout/include_horiz_divide" />
+
+            <TextView
+                android:id="@+id/tv_user_login"
+                style="@style/button_submit"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/dp_00"
+                android:layout_marginTop="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_00"
+                android:text="@string/user_login" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

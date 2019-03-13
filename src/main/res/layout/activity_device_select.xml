@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="ui"
+            type="cn.yaman.activity.center.DeviceSelectActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <TextView
+                android:id="@+id/tv_device_add_new"
+                style="@style/button_common"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:onClick="addDevice"
+                android:text="@string/text_device_add_new" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_device_select"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/tv_device_add_new"
+                android:layout_marginBottom="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

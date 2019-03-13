@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="cn.yaman.core.CommonTitlebarStrategy" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_titlebar"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/dp_08"
+        android:layout_height="@dimen/dp_48">
+
+        <ImageView
+            android:id="@+id/iv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_08"
+            android:visibility="gone"
+            android:src="@mipmap/title_back_gold"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_title_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_08"
+            android:paddingEnd="@dimen/dp_08"
+            android:textColor="@color/text_color_dark"
+            android:textSize="@dimen/sp_16"
+            android:visibility="gone"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_08"
+            android:paddingEnd="@dimen/dp_16"
+            android:visibility="gone"
+            android:textColor="@color/text_color_dark"
+            android:textSize="@dimen/sp_16"
+           android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+</layout>

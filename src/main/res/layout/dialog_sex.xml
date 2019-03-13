@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_round_bg_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:text="@string/dialog_sex_title"
+        android:textColor="@color/color_dialog_text"
+        android:textSize="@dimen/sp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c5cacb" />
+
+    <TextView
+        android:id="@+id/tv_sex_male"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:drawableLeft="@mipmap/ic_set_right_arrow"
+        android:drawablePadding="10dp"
+        android:background="@drawable/bg_sex_select"
+        android:text="@string/dialog_sex_female"
+        android:textColor="@color/color_dialog_text"
+        android:textSize="@dimen/sp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#c5cacb" />
+
+    <TextView
+        android:id="@+id/tv_sex_female"
+        android:background="@drawable/bg_sex_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/dialog_sex_male"
+        android:drawablePadding="10dp"
+        android:textColor="@color/color_dialog_text"
+        android:textSize="@dimen/sp_16" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#c5cacb" />
+    <TextView
+        android:id="@+id/tv_sex_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/dialog_btn_cancel"
+        android:textColor="@color/color_dialog_text"
+        android:textSize="@dimen/sp_16" />
+</LinearLayout>

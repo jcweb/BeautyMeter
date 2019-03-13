@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="cn.yaman.activity.UserLoginActivity" />
+
+        <variable
+            name="type"
+            type="Integer" />
+
+        <variable
+            name="ui"
+            type="UserLoginActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_00"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                android:text="@string/login_phone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_24" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_32"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_country_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dp_08"
+                    android:background="@color/transparent"
+                    android:drawableEnd="@mipmap/arrow_down"
+                    android:drawablePadding="@dimen/dp_04"
+                    android:gravity="center"
+                    android:text="@string/login_phone_prefix"
+                    android:onClick="setCountryCode"
+                    android:textColor="@color/text_color_dark"
+                    android:textSize="@dimen/sp_14" />
+
+                <View
+                    android:layout_width="@dimen/dp_01"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_08"
+                    android:layout_marginEnd="@dimen/dp_04"
+                    android:layout_marginBottom="@dimen/dp_08"
+                    android:background="@color/colorDivide" />
+
+                <EditText
+                    android:id="@+id/et_user_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="@string/login_phone_hint"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <include layout="@layout/include_horiz_divide" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_16"
+                android:orientation="horizontal"
+                android:visibility="@{type == UserLoginActivity.TYPE_LOGIN  ? View.VISIBLE : View.GONE}">
+
+                <EditText
+                    android:id="@+id/et_user_passwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="@{type == UserLoginActivity.TYPE_LOGIN  ? @string/login_passwd : @string/login_code}"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="Autofill" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_16"
+                android:orientation="horizontal"
+                android:visibility="@{type == UserLoginActivity.TYPE_LOGIN  ? View.GONE : View.VISIBLE}">
+
+                <EditText
+                    android:id="@+id/et_user_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:hint="@{type == UserLoginActivity.TYPE_LOGIN  ? @string/login_passwd : @string/login_code}"
+                    android:inputType="number"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="Autofill" />
+
+                <!--android:inputType="textPassword"-->
+                <TextView
+                    android:id="@+id/tv_user_getcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end|center_vertical"
+                    android:gravity="center"
+                    android:onClick="@{ui::vcode}"
+                    android:padding="@dimen/dp_08"
+                    android:text="@string/login_getCode" />
+            </FrameLayout>
+
+            <include layout="@layout/include_horiz_divide" />
+
+            <TextView
+                android:id="@+id/tv_user_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/dp_08"
+                android:gravity="center"
+                android:onClick="@{ui::forget}"
+                android:padding="@dimen/dp_08"
+                android:text="@string/login_forget"
+                android:visibility="@{type == UserLoginActivity.TYPE_LOGIN  ? View.VISIBLE : View.INVISIBLE}" />
+
+            <TextView
+                android:id="@+id/tv_user_login"
+                style="@style/button_submit"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/dp_00"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_00"
+                android:onClick="@{()->ui.login(type)}"
+                android:text="@{type == UserLoginActivity.TYPE_LOGIN  ? @string/user_login : @string/user_next}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="center"
+                android:onClick="@{ui::regist}"
+                android:text="@string/user_regist"
+                android:textColor="@color/text_color_dark"
+                android:textSize="@dimen/sp_16"
+                android:visibility="@{type == UserLoginActivity.TYPE_LOGIN  ? View.VISIBLE : View.GONE}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:orientation="horizontal"
+            android:visibility="@{type == UserLoginActivity.TYPE_REGIST  ? View.VISIBLE : View.GONE}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_protocol_prefix"
+                android:textColor="@color/text_color_light"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_02"
+                android:onClick="@{ui::protocol}"
+                android:text="@string/login_protocol"
+                android:textColor="@color/text_color_dark"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

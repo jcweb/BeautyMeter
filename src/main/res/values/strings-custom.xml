@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ycuwq_datepicker_cancel">取消</string>
+    <string name="ycuwq_datepicker_decide">确认</string>
+    <string name="ycuwq_datepicker_hour">时</string>
+    <string name="ycuwq_datepicker_minute">分</string>
+    <string name="dialog_edit_title">修改昵称</string>
+    <string name="dialog_edit_hint">请输入昵称</string>
+    <string name="dialog_date_title">设置出生日期</string>
+    <string name="dialog_sex_title">设置性别</string>
+    <string name="dialog_height_title">设置身高</string>
+    <string name="dialog_btn_save">保存</string>
+    <string name="dialog_btn_cancel">取消</string>
+    <string name="dialog_btn_confirm">确定</string>
+    <string name="dialog_sex_male">男</string>
+    <string name="dialog_sex_female">女</string>
+
+    <string name="toast_user_nick">用户昵称不能为空</string>
+    <string name="toast_user_height">用户身高不能为空</string>
+    <string name="toast_user_sex">用户性别不能为空</string>
+    <string name="toast_user_birthday">用户出生日期不能为空</string>
+
+    <string name="center_phone_hint">手机号</string>
+    <string name="center_phone_input">请输入手机号</string>
+    <string name="center_verify_hint">验证码</string>
+    <string name="center_pw_hint">密码</string>
+    <string name="pw_modify_title">修改密码</string>
+
+    <string name="dialog_exit_title">确定要退出吗？</string>
+    <string name="btn_commit">提交</string>
+    <string name="dialog_phone_title">更换手机</string>
+
+    <string name="feedback_hint">请输入您的手机号/QQ/邮箱(选填)</string>
+    <string name="dapp_exit_hint">再按一次退出程序</string>
+
+    <string name="nurse_process_part">按摩部位</string>
+    <string name="nurse_process_commit">结束</string>
+
+    <string name="type_image">照片</string>
+    <string name="type_video">视频</string>
+    <string name="type_voice">语音</string>
+    <string name="path_record">拍照</string>
+    <string name="path_album">从相册选择</string>
+    <string name="str_work">开始作业</string>
+    <string name="str_upload">上传资料</string>
+</resources>

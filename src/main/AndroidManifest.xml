@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tcl.smart.beauty">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="cn.yaman.YamanApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name="cn.yaman.activity.AreaSelectActivity"></activity>
+        <activity android:name="cn.yaman.activity.RecordDetailActivity" />
+        <activity android:name="cn.yaman.activity.center.DeviceAddActivity" />
+        <activity android:name="cn.yaman.activity.center.DeviceSelectActivity" />
+        <activity android:name="cn.yaman.activity.NurseProcessActivity" />
+        <activity android:name="cn.yaman.activity.StartNurseActivity" />
+        <activity android:name="cn.yaman.activity.SchemeDetailActivity" />
+        <activity android:name="cn.yaman.activity.SchemeActivity" />
+        <activity android:name="cn.yaman.activity.NurseRecordActivity" />
+        <activity android:name="cn.yaman.activity.PwLoginActivity" />
+        <activity android:name="cn.yaman.activity.center.ModifyPwActivity" />
+        <activity android:name="cn.yaman.activity.center.FirmWareActivity" />
+        <activity android:name="cn.yaman.activity.center.DeviceDetailActivity" />
+        <activity android:name="cn.yaman.activity.center.DeviceListActivity" />
+        <activity android:name="cn.yaman.activity.center.HelpActivity" />
+        <activity android:name="cn.yaman.activity.center.AboutActivity" />
+        <activity android:name="cn.yaman.activity.center.FeedbackActivity" />
+        <activity android:name="cn.yaman.activity.center.UserCenterActivity" />
+        <activity android:name="cn.yaman.activity.SettingActivity" />
+        <activity android:name="cn.yaman.activity.UserWelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.yaman.activity.HomeActivity" />
+        <activity android:name="cn.yaman.activity.UserLoginActivity" />
+        <activity android:name="cn.yaman.activity.UserPasswdActivity" />
+        <activity android:name="cn.yaman.activity.UserProtocolActivity" />
+    </application>
+
+</manifest>

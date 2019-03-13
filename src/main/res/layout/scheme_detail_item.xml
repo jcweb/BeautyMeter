@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_scheme_detail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_scheme_detail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/color_user_ceter_head_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_scheme_head"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tv_scheme_detail_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_18"
+                android:text="@string/schema_select_hint"
+                android:textColor="@color/color_black_333" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tv_scheme_detail_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textSize="@dimen/sp_12"
+                android:text="@string/schema_select_hint"
+                android:textColor="@color/color_black_666" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_scheme_detail_content"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginTop="-10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_scheme_head"
+            android:layout_alignLeft="@id/ll_scheme_head"
+            android:text="色达大所多\n大叔大婶大所大所大所多\n" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="ui"
+            type="cn.yaman.activity.center.DeviceDetailActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_user_ceter_head_bg"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/iv_device_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/title_back_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_device_back"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/firmware_name_xs"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_24" />
+
+            <ImageView
+                android:id="@+id/iv_device_logo"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#f4f4f4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/style_center_text"
+                android:gravity="left|center_vertical"
+                android:text="@string/firmware_product_remark" />
+
+            <TextView
+                android:id="@+id/tv_device_detail_remark"
+                style="@style/style_center_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#f4f4f4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/style_center_text"
+                android:gravity="left|center_vertical"
+                android:text="@string/firmware_product_model" />
+
+            <TextView
+                android:id="@+id/tv_device_detail_model"
+                style="@style/style_center_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/color_black_999" />
+        </LinearLayout>
+
+        <include layout="@layout/include_horiz_divide" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/style_center_text"
+                android:gravity="left|center_vertical"
+                android:text="@string/firmware_mac_address" />
+
+            <TextView
+                android:id="@+id/tv_device_detail_mac"
+                style="@style/style_center_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:textColor="@color/color_black_999" />
+        </LinearLayout>
+
+        <include layout="@layout/include_horiz_divide" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/style_center_text"
+                android:gravity="left|center_vertical"
+                android:text="@string/firmware_current_version" />
+
+            <TextView
+                android:id="@+id/tv_firmware_version"
+                style="@style/style_center_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/ic_set_right_arrow"
+                android:drawablePadding="10dp"
+                android:gravity="right|center_vertical"
+                android:onClick="version"
+                android:textColor="@color/color_black_999"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <include layout="@layout/include_horiz_divide" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/color_center_bg" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="unBinding"
+            android:padding="15dp"
+            android:text="@string/firmware_relieve"
+            android:textColor="@color/color_black_666" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/color_center_bg" />
+    </LinearLayout>
+</layout>

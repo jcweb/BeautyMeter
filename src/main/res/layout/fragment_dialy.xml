@@ -1,0 +1,50 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:calendarview="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.othershe.calendarview.weiget.WeekView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:paddingTop="10dp"
+                    calendarview:week_background="@color/color_user_ceter_head_bg"
+                    calendarview:week_color="@color/color_black_333" />
+
+                <com.othershe.calendarview.weiget.CalendarView
+                    android:id="@+id/cv_fragment_dialy"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    calendarview:bg_color="@color/color_user_ceter_head_bg"
+                    calendarview:choose_type="single"
+                    calendarview:show_click="true"
+                    calendarview:show_holiday="false"
+                    calendarview:show_lunar="false"
+                    calendarview:show_term="false"
+                    calendarview:switch_choose="false"></com.othershe.calendarview.weiget.CalendarView>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_container_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/rectangle_round_bg_green"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

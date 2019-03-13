@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="leftList"
+            type="cn.yaman.activity.HomeActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/leftHead"
+            layout="@layout/drawer_layout_left_head"
+            bind:LeftHead="@{leftList}"
+            />
+
+        <TextView
+            android:id="@+id/tv_drawer_device"
+            style="@style/stye_home_drawer_list_text"
+            android:drawableLeft="@mipmap/ic_drawer_list_device"
+            android:drawablePadding="15dp"
+            android:onClick="device"
+            android:text="我的设备" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="45dp"
+            android:background="@color/color_drawer_list_line"></View>
+
+        <TextView
+            android:id="@+id/tv_drawer_setting"
+            style="@style/stye_home_drawer_list_text"
+            android:drawableLeft="@mipmap/ic_drawer_list_set"
+            android:drawablePadding="15dp"
+            android:onClick="setting"
+            android:text="设置" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="45dp"
+            android:onClick=""
+            android:background="@color/color_drawer_list_line"></View>
+
+        <TextView
+            android:id="@+id/tv_drawer_about"
+            style="@style/stye_home_drawer_list_text"
+            android:drawableLeft="@mipmap/ic_drawer_list_about"
+            android:drawablePadding="15dp"
+            android:onClick="about"
+            android:text="关于我们" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="45dp"
+            android:background="@color/color_drawer_list_line"></View>
+
+        <TextView
+            android:id="@+id/tv_drawer_feedback"
+            style="@style/stye_home_drawer_list_text"
+            android:drawableLeft="@mipmap/ic_drawer_list_feedback"
+            android:drawablePadding="15dp"
+            android:onClick="feedback"
+            android:text="意见反馈" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="45dp"
+            android:background="@color/color_drawer_list_line"></View>
+
+        <TextView
+            android:id="@+id/tv_drawer_help"
+            style="@style/stye_home_drawer_list_text"
+            android:drawableLeft="@mipmap/ic_drawer_list_help"
+            android:drawablePadding="15dp"
+            android:onClick="help"
+            android:text="使用帮助" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/ic_left_bottom"/>
+    </LinearLayout>
+</layout>

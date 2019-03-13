@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="ui"
+            type="cn.yaman.activity.center.FirmWareActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_horiz_divide" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableTop="@mipmap/ic_firmware_logo"
+                android:drawablePadding="20dp"
+                android:text="@string/center_firmware_version"
+                android:textColor="@color/color_black_666"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:id="@+id/tv_firmware_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="1.0.0.1"
+                android:textColor="@color/color_black_666"
+                android:textSize="@dimen/sp_18" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/color_center_bg"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+            <TextView
+                android:id="@+id/tv_firmware_newest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_center_text"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/sp_18"
+                android:visibility="visible"
+                android:text="@string/center_firmware_newest"
+                />
+            <TextView
+                android:id="@+id/tv_firmware_newer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:textColor="@color/color_black_666"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/sp_18"
+                android:text="@string/center_firmware_newer"
+                />
+            <TextView
+                android:id="@+id/tv_firmware_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_black_333"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/sp_18"
+                android:text="@string/center_firmware_update"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_center_bg"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+</layout>

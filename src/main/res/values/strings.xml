@@ -1,0 +1,419 @@
+<resources>
+    <string name="app_name">智能美容仪</string>
+    <string name="user_regist">注册</string>
+    <string name="user_login">登录</string>
+    <string name="user_input_phone">请输入手机号</string>
+
+    <string name="login_phone">请输入手机号</string>
+    <string name="login_password">请输入新的登录密码</string>
+    <string name="login_phone_prefix">+86</string>
+    <string name="login_phone_hint">请输入您的手机号码</string>
+    <string name="login_passwd">请输入您的登录密码</string>
+    <string name="login_passwor_set">请输入您的登录密码</string>
+    <string name="login_code">请输入收到的验证码</string>
+    <string name="login_getCode">获取验证码</string>
+    <string name="login_regetCode">%2d秒后再次获取</string>
+    <string name="login_forget">忘记密码？</string>
+    <string name="login_protocol_prefix">点击下一步，即表示您已同意</string>
+    <string name="login_protocol">用户协议及隐私策略</string>
+    <string name="user_next">下一步</string>
+
+    <string name="user_passwd">请设置登录密码</string>
+    <string name="user_newpasswd">请设置新的登录密码</string>
+    <string name="user_passwd_hint">请设置您的登录密码</string>
+
+    <!--个人中心-->
+    <string name="center_firmware_version">当前版本</string>
+    <string name="center_firmware_newest">当前已是最新版本</string>
+    <string name="center_firmware_newer">发现新的版本</string>
+    <string name="center_firmware_update">立即更新</string>
+    <string name="center_version_content">固件版本</string>
+    <string name="firmware_name_xs">XESS智能美容仪XS</string>
+    <string name="firmware_name_xr">XESS智能美容仪XR</string>
+    <string name="firmware_current_version">固件版本</string>
+    <string name="firmware_mac_address">MAC地址</string>
+    <string name="firmware_product_model">产品型号</string>
+    <string name="firmware_product_remark">备注</string>
+    <string name="firmware_relieve">解除绑定</string>
+    <string name="firmware_bind_success">绑定成功</string>
+    <string name="firmware_manage">管理</string>
+    <string name="device_list_title">选择您购买的产品</string>
+    <string name="center_about_title">关于我们</string>
+    <string name="center_help_title">使用帮助</string>
+    <string name="center_user_title">个人资料</string>
+    <string name="center_feedback_title">意见反馈</string>
+    <string name="center_feedback_type">反馈类型</string>
+    <string name="center_feedback_idea">意见</string>
+    <string name="center_pw_input">请输入新密码</string>
+    <string name="center_pw_reinput">请再次输入新密码</string>
+    <string name="center_verify_input">请输入验证码</string>
+    <string name="feedback_content_hint">请输入您对产品的意见，我们将不断优化体验</string>
+    <string name="phone_modify_toast">手机号不能为空</string>
+    <string name="phone_verify_toast">验证码不能为空</string>
+    <string name="feedback_content_commit">提交</string>
+
+    <!--护理相关-->
+    <string name="home_plan_today">今日状态</string>
+    <string name="home_plan_sign">无计划</string>
+    <string name="home_plan_pre_nurse">重复上次护理</string>
+    <string name="schema_select">模式选择</string>
+    <string name="schema_select_hint">根据您的需要快速护理</string>
+    <string name="schema_record_head">我的护理记录</string>
+    <string name="scheme_select_hint">选择适合您的护理方案</string>
+    <string name="title_scheme">护理方案</string>
+    <string name="button_start_scheme">开始护理</string>
+    <string name="nurse_prompt">即将开始护理</string>
+    <string name="start_prepare">准备开始</string>
+    <string name="nurse_prepare">进行护理准备</string>
+    <string name="my_equip_title">我的设备</string>
+    <string name="no_data">—</string>
+    <string name="nurse_model">护理模式</string>
+    <string name="nurse_duration">护理时长</string>
+    <string name="nurse_effect">护理功效</string>
+    <string name="nurse_detail">护理细节</string>
+    <string name="nurse_time">护理细节</string>
+    <string name="nurse_detail_tip">逆龄效果是综合权衡了护理时间、护理强度与您的肤质等维度，对本次护理进行评估的指标，仅供参考</string>
+
+    <!--蓝牙相关-->
+    <string name="device_select_title">选择您购买的产品</string>
+    <string name="text_device_close">请确认按摩仪有电并靠近手机</string>
+    <string name="dialog_title_bluetooth_open">请确认按摩仪有电并靠近手机</string>
+    <string name="text_device_match">开始匹配</string>
+    <string name="text_device_buy">购买</string>
+    <string name="text_device_set">去设置</string>
+    <string name="text_device_cancle">取消</string>
+    <string name="text_device_complete">完成</string>
+    <string name="text_device_add">添加</string>
+    <string name="text_device_add_new">添加新设备</string>
+    <string name="text_device_manage">管理</string>
+    <string name="text_skin_age">肌肤逆龄</string>
+    <string name="text_hour">小时</string>
+    <string name="minute_once">分钟/次</string>
+
+    <array name="feedback_list_content">
+        <item>蓝牙相关</item>
+        <item>充电相关</item>
+        <item>语音提示相关</item>
+        <item>APP相关</item>
+        <item>硬件相关</item>
+    </array>
+
+    <array name="record_effect_index">
+        <item>ATP</item>
+        <item>胶原蛋白</item>
+        <item>弹性蛋白</item>
+        <item>微循环</item>
+        <item>肌肤水分</item>
+        <item>生成因子</item>
+        <item>DNA修复</item>
+        <item>肌肉活力</item>
+        <item>燃脂</item>
+    </array>
+
+    <string-array name="tab_list">
+        <item>日数据</item>
+        <item>月数据</item>
+    </string-array>
+    <string name="about_content">智能美容仪介绍方案智能美容仪介绍方案智能美容仪介绍方案智能美容仪介绍方案智能美容仪介绍方案智能美容仪介绍方案智能美容仪介绍方案智能美容仪介绍方案</string>
+    <string name="help_content">使用帮助一\n\n请仔细阅读以下条款，如果你对本协议的任何条款如果你对本协议的任何条款如果你对本协议的任何条款如果你对本协议的任何条款如果你对本协议的任何条款\n\n
+    使用帮助二\n\n用户注册成功以后，知乎给每个用户知乎将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。
+用户须对在知乎的注册信息的真实性、合法性、有效性承担全部责任，用户不得冒充他人；不得利用他人的名义发布任何信息；不得恶意使用注册帐号导致其他用户误认；否则知乎有权立即停止提供服务，收回其帐号并由用户独自承担由此而产生的一切法律责任。
+用户直接或通过各类方式（如 RSS 源和站外 API 引用等）间接使用知乎服务和数据的行为，都将被视作已无条件接受本协议全部内容；若用户对本协议的任何条款存在异议，请停止使用知乎所提供的全部服务。
+知乎是一个信息分享、传播及获取的平台，用户通过知乎发表的信息为公开的信息，其他第三方均可以通过知乎获取用户发表的信息，用户对任何信息的发表即认可该信息为公开的信息，并单独对此行为承担法律责任；任何用户不愿被其他第三人获知的信息都不应该在知乎上进行发表。
+用户承诺不得以任何方式利用知乎直接</string>
+    <string name="user_protocol">欢迎您来到知乎。\n
+
+请您仔细阅读以下条款，如果您对本协议的任何条款表示异议，您可以选择不进入知乎。当您注册成功，无论是进入知乎，还是在知乎上发布任何内容（即「内容」），均意味着您（即「用户」）完全接受本协议项下的全部条款。
+\n
+使用规则
+用户注册成功后，知乎将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。
+用户须对在知乎的注册信息的真实性、合法性、有效性承担全部责任，用户不得冒充他人；不得利用他人的名义发布任何信息；不得恶意使用注册帐号导致其他用户误认；否则知乎有权立即停止提供服务，收回其帐号并由用户独自承担由此而产生的一切法律责任。
+用户直接或通过各类方式（如 RSS 源和站外 API 引用等）间接使用知乎服务和数据的行为，都将被视作已无条件接受本协议全部内容；若用户对本协议的任何条款存在异议，请停止使用知乎所提供的全部服务。
+知乎是一个信息分享、传播及获取的平台，用户通过知乎发表的信息为公开的信息，其他第三方均可以通过知乎获取用户发表的信息，用户对任何信息的发表即认可该信息为公开的信息，并单独对此行为承担法律责任；任何用户不愿被其他第三人获知的信息都不应该在知乎上进行发表。
+用户承诺不得以任何方式利用知乎直接或间接从事违反中国法律以及社会公德的行为，知乎有权对违反上述承诺的内容予以删除。
+用户不得利用知乎服务制作、上载、复制、发布、传播或者转载如下内容：
+\n
+反对宪法所确定的基本原则的；
+危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；
+损害国家荣誉和利益的；
+煽动民族仇恨、民族歧视，破坏民族团结的；
+侮辱、滥用英烈形象，否定英烈事迹，美化粉饰侵略战争行为的；
+破坏国家宗教政策，宣扬邪教和封建迷信的；
+散布谣言，扰乱社会秩序，破坏社会稳定的；
+散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；
+侮辱或者诽谤他人，侵害他人合法权益的；
+含有法律、行政法规禁止的其他内容的信息。
+所有用户同意遵守知乎社区管理规定（试行）和知乎视频服务协议（试行）。
+机构用户同意遵守知乎机构号服务协议，以及知乎机构号使用规范（试行）。
+知乎有权对用户使用知乎的情况进行审查和监督，如用户在使用知乎时违反任何上述规定，知乎或其授权的人有权要求用户改正或直接采取一切必要的措施（包括但不限于更改或删除用户张贴的内容、暂停或终止用户使用知乎的权利）以减轻用户不当行为造成的影响。
+知识产权
+知乎是一个信息获取、分享及传播的平台，我们尊重和鼓励知乎用户创作的内容，认识到保护知识产权对知乎生存与发展的重要性，承诺将保护知识产权作为知乎运营的基本原则之一。
+\n
+用户在知乎上发表的全部原创内容（包括但不仅限于回答、文章和评论），著作权均归用户本人所有。用户可授权第三方以任何方式使用，不需要得到知乎的同意。
+知乎上可由多人参与编辑的内容，包括但不限于问题及补充说明、答案总结、话题描述、话题结构，所有参与编辑者均同意，相关知识产权归知乎所有。
+知乎提供的网络服务中包含的标识、版面设计、排版方式、文本、图片、图形等均受著作权、商标权及其它法律保护，未经相关权利人（含知乎及其他原始权利人）同意，上述内容均不得在任何平台被直接或间接发布、使用、出于发布或使用目的的改写或再发行，或被用于其他任何商业目的。
+为了促进知识的分享和传播，用户将其在知乎上发表的全部内容，授予知乎免费的、不可撤销的、非独家使用许可，知乎有权将该内容用于知乎各种形态的产品和服务上，包括但不限于网站以及发表的应用或其他互联网产品。
+第三方若出于非商业目的，将用户在知乎上发表的内容转载在知乎之外的地方，应当在作品的正文开头的显著位置注明原作者姓名（或原作者在知乎上使用的帐号名称），给出原始链接，注明「发表于知乎」，并不得对作品进行修改演绎。若需要对作品进行修改，或用于商业目的，第三方应当联系用户获得单独授权，按照用户规定的方式使用该内容。
+知乎为用户提供「保留所有权利，禁止转载」的选项。除非获得原作者的单独授权，任何第三方不得转载标注了「禁止转载」的内容，否则均视为侵权。
+在知乎上传或发表的内容，用户应保证其为著作权人或已取得合法授权，并且该内容不会侵犯任何第三方的合法权益。如果第三方提出关于著作权的异议，知乎有权根据实际情况删除相关的内容，且有权追究用户的法律责任。给知乎或任何第三方造成损失的，用户应负责全额赔偿。
+如果任何第三方侵犯了知乎用户相关的权利，用户同意授权知乎或其指定的代理人代表知乎自身或用户对该第三方提出警告、投诉、发起行政执法、诉讼、进行上诉，或谈判和解，并且用户同意在知乎认为必要的情况下参与共同维权。
+知乎有权但无义务对用户发布的内容进行审核，有权根据相关证据结合《侵权责任法》、《信息网络传播权保护条例》等法律法规及知乎社区指导原则对侵权信息进行处理。
+个人隐私
+尊重用户个人隐私信息的私有性是知乎的一贯原则，知乎将通过技术手段、强化内部管理等办法充分保护用户的个人隐私信息，除法律或有法律赋予权限的政府部门要求或事先得到用户明确授权等原因外，知乎保证不对外公开或向第三方透露用户个人隐私信息，或用户在使用服务时存储的非公开内容。同时，为了运营和改善知乎的技术与服务，知乎将可能会自行收集使用或向第三方提供用户的非个人隐私信息，这将有助于知乎向用户提供更好的用户体验和服务质量。
+\n
+如果用户不希望被搜索引擎检索，可在「个人设置」中修改「个人信息」部分的设置，对于站外的用户与搜索引擎，你的姓名会显示为「知乎用户」，头像图片也将被隐藏。
+\n
+您使用或继续使用我们的服务，即意味着同意我们按照知乎《隐私政策》收集、使用、储存和分享您的相关信息。详情请参见知乎《隐私政策》
+\n
+知乎币
+知乎币是专供知乎用户在知乎平台使用的虚拟币，知乎币可用于知乎平台上赞赏、购买和消费内容产品。除此之外，不得用于其他用途。
+如果用户使用他人代充或以其他违规方式充值造成其他用户或第三方权益受损时，不得因此要求知乎作任何补偿或赔偿，知乎保留随时冻结其帐户余额、暂停或终止其使用各项充值服务及禁用其帐户的权利。如知乎有理由相信用户的知乎币帐户或使用情况涉及违规充值、作弊或异常状况，知乎有权拒绝该用户继续使用知乎币，并按本协议采取冻结、禁用帐户等相关措施。
+知乎币和人民币的兑换比例以用户购买知乎币的服务页面显示为准。知乎有权根据运营情况随时变更兑换比例，并在用户购买知乎币的服务页面显示。
+知乎币一经充值成功，除法律法规明确规定外，在任何情况下不能兑换为法定货币，不能转让他人。用户间交易知乎币构成对本协议的违反，知乎有权不通知用户而采取适当措施，以确保知乎不为违规用户提供知乎币交易的平台服务。知乎币不支持提现功能。
+如果用户使用 iOS 设备充值知乎币，必须通过 Apple 应用内购买机制（In-App Purchase）进行支付。为保障帐号安全，请在个人 iOS 设备上使用个人常用 Apple ID 进行操作。
+iOS 和其他设备之间的知乎币是独立计算不互通的。若使用同一帐号分别在 iOS 和其他设备上登录知乎时，知乎币不能实现互通共用。使用 iOS 设备时购买的知乎币，只能在 iOS 设备上使用，当使用其他设备登录同一帐号时，不能使用。
+侵权举报
+处理原则
+\n
+知乎作为知识讨论社区，高度重视自由表达和个人、企业正当权利的平衡。依照法律规定删除违法信息是知乎社区的法定义务，知乎社区亦未与任何中介机构合作开展此项业务。
+\n
+受理范围
+\n
+受理知乎社区内侵犯企业或个人合法权益的侵权举报，包括但不限于涉及个人隐私、造谣与诽谤、商业侵权。
+\n
+涉及个人隐私：发布内容中直接涉及身份信息，如个人姓名、家庭住址、身份证号码、工作单位、私人电话等详细个人隐私；
+造谣、诽谤：发布内容中指名道姓（包括自然人和企业）的直接谩骂、侮辱、虚构中伤、恶意诽谤等；
+商业侵权：泄露企业商业机密及其他根据保密协议不能公开讨论的内容。
+举报条件
+\n
+用户在知乎发表的内容仅表明其个人的立场和观点，并不代表知乎的立场或观点。如果个人或企业发现知乎上存在侵犯自身合法权益的内容，可以先尝试与作者取得联系，通过沟通协商解决问题。如您无法联系到作者，或无法通过与作者沟通解决问题，您可通过点击内容下方的举报按钮来向知乎平台进行投诉。为了保证问题能够及时有效地处理，请务必提交真实有效、完整清晰的材料，否则投诉将无法受理。您需要向知乎提供的投诉材料包括：
+\n
+权利人对涉嫌侵权内容拥有商标权、著作权和/或其他依法可以行使权利的权属证明，权属证明通常是营业执照或组织机构代码证；
+举报人的身份证明，身份证明可以是身份证或护照；
+如果举报人非权利人，请举报人提供代表权利人进行举报的书面授权证明。
+为确保投诉材料的真实性，在侵权举报中，您还需要签署以下法律声明：
+\n
+我本人为所举报内容的合法权利人；
+我举报的发布在知乎社区中的内容侵犯了本人相应的合法权益；
+如果本侵权举报内容不完全属实，本人将承担由此产生的一切法律责任，并承担和赔偿知乎因根据投诉人的通知书对相关帐号的处理而造成的任何损失，包括但不限于知乎因向被投诉方赔偿而产生的损失及知乎名誉、商誉损害等。
+处理流程
+\n
+出于网络平台的监督属性，并非所有申请都必须受理。知乎自收到举报的七个工作日内处理完毕并给出回复。处理期间，不提供任何电话、邮件及其他方式的查询服务。
+\n
+出现知乎已经删除或处理的内容，但是百度、谷歌等搜索引擎依然可以搜索到的现象，是因为百度、谷歌等搜索引擎自带缓存，此类问题知乎无权也无法处理，因此相关申请不予受理。您可以自行联系搜索引擎服务商进行处理。
+\n
+此为知乎社区唯一的官方侵权投诉渠道，暂不提供其他方式处理此业务。
+\n
+用户在知乎中的商业行为引发的法律纠纷，由交易双方自行处理，与知乎无关。
+\n
+免责申明
+知乎不能对用户发表的回答或评论的正确性进行保证。
+用户在知乎发表的内容仅表明其个人的立场和观点，并不代表知乎的立场或观点。作为内容的发表者，需自行对所发表内容负责，因所发表内容引发的一切纠纷，由该内容的发表者承担全部法律及连带责任。知乎不承担任何法律及连带责任。
+知乎不保证网络服务一定能满足用户的要求，也不保证网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作保证。
+对于因不可抗力或知乎不能控制的原因造成的网络服务中断或其它缺陷，知乎不承担任何责任，但将尽力减少因此而给用户造成的损失和影响。
+\n
+协议修改
+根据互联网的发展和有关法律、法规及规范性文件的变化，或者因业务发展需要，知乎有权对本协议的条款作出修改或变更，一旦本协议的内容发生变动，知乎将会直接在知乎网站上公布修改之后的协议内容，该公布行为视为知乎已经通知用户修改内容。知乎也可采用电子邮件或私信的传送方式，提示用户协议条款的修改、服务变更、或其它重要事项。
+如果不同意知乎对本协议相关条款所做的修改，用户有权并应当停止使用知乎。如果用户继续使用知乎，则视为用户接受知乎对本协议相关条款所做的修改。</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="country_code_list_ch" translatable="false">
+        <item>安哥拉             *+244  </item>
+        <item>阿富汗             *+93   </item>
+        <item>阿尔巴尼亚         *+355  </item>
+        <item>阿尔及利亚         *+213  </item>
+        <item>安道尔共和国       *+376  </item>
+        <item>安圭拉岛           *+1264 </item>
+        <item>安提瓜和巴布达     *+1268 </item>
+        <item>阿根廷             *+54   </item>
+        <item>亚美尼亚           *+374  </item>
+        <item>阿森松             *+247  </item>
+        <item>澳大利亚           *+61   </item>
+        <item>奥地利             *+43   </item>
+        <item>阿塞拜疆           *+994  </item>
+        <item>巴哈马             *+1242 </item>
+        <item>巴林               *+973  </item>
+        <item>孟加拉国           *+880  </item>
+        <item>巴巴多斯           *+1246 </item>
+        <item>白俄罗斯           *+375  </item>
+        <item>比利时             *+32   </item>
+        <item>伯利兹             *+501  </item>
+        <item>贝宁               *+229  </item>
+        <item>百慕大群岛         *+1441 </item>
+        <item>玻利维亚           *+591  </item>
+        <item>博茨瓦纳           *+267  </item>
+        <item>巴西               *+55   </item>
+        <item>文莱               *+673  </item>
+        <item>保加利亚           *+359  </item>
+        <item>布基纳法索         *+226  </item>
+        <item>缅甸               *+95   </item>
+        <item>布隆迪             *+257  </item>
+        <item>喀麦隆             *+237  </item>
+        <item>加拿大             *+1    </item>
+        <item>开曼群岛           *+1345 </item>
+        <item>中非共和国         *+236  </item>
+        <item>乍得               *+235  </item>
+        <item>智利               *+56   </item>
+        <item>中国               *+86   </item>
+        <item>哥伦比亚           *+57   </item>
+        <item>刚果               *+242  </item>
+        <item>库克群岛           *+682  </item>
+        <item>哥斯达黎加         *+506  </item>
+        <item>古巴               *+53   </item>
+        <item>塞浦路斯           *+357  </item>
+        <item>捷克               *+420  </item>
+        <item>丹麦               *+45   </item>
+        <item>吉布提             *+253  </item>
+        <item>多米尼加共和国     *+1890 </item>
+        <item>厄瓜多尔           *+593  </item>
+        <item>埃及               *+20   </item>
+        <item>萨尔瓦多           *+503  </item>
+        <item>爱沙尼亚           *+372  </item>
+        <item>埃塞俄比亚         *+251  </item>
+        <item>斐济               *+679  </item>
+        <item>芬兰               *+358  </item>
+        <item>法国               *+33   </item>
+        <item>法属圭亚那         *+594  </item>
+        <item>加蓬               *+241  </item>
+        <item>冈比亚             *+220  </item>
+        <item>格鲁吉亚           *+995  </item>
+        <item>德国               *+49   </item>
+        <item>加纳               *+233  </item>
+        <item>直布罗陀           *+350  </item>
+        <item>希腊               *+30   </item>
+        <item>格林纳达           *+1809 </item>
+        <item>关岛               *+1671 </item>
+        <item>危地马拉           *+502  </item>
+        <item>几内亚             *+224  </item>
+        <item>圭亚那             *+592  </item>
+        <item>海地               *+509  </item>
+        <item>洪都拉斯           *+504  </item>
+        <item>香港               *+852  </item>
+        <item>匈牙利             *+36   </item>
+        <item>冰岛               *+354  </item>
+        <item>印度               *+91   </item>
+        <item>印度尼西亚         *+62   </item>
+        <item>伊朗               *+98   </item>
+        <item>伊拉克             *+964  </item>
+        <item>爱尔兰             *+353  </item>
+        <item>以色列             *+972  </item>
+        <item>意大利             *+39   </item>
+        <item>科特迪瓦           *+225  </item>
+        <item>牙买加             *+1876 </item>
+        <item>日本               *+81   </item>
+        <item>约旦               *+962  </item>
+        <item>柬埔寨             *+855  </item>
+        <item>哈萨克斯坦         *+327  </item>
+        <item>肯尼亚             *+254  </item>
+        <item>韩国               *+82   </item>
+        <item>科威特             *+965  </item>
+        <item>吉尔吉斯坦         *+331  </item>
+        <item>老挝               *+856  </item>
+        <item>拉脱维亚           *+371  </item>
+        <item>黎巴嫩             *+961  </item>
+        <item>莱索托             *+266  </item>
+        <item>利比里亚           *+231  </item>
+        <item>利比亚             *+218  </item>
+        <item>列支敦士登         *+423  </item>
+        <item>立陶宛             *+370  </item>
+        <item>卢森堡             *+352  </item>
+        <item>澳门               *+853  </item>
+        <item>马达加斯加         *+261  </item>
+        <item>马拉维             *+265  </item>
+        <item>马来西亚           *+60   </item>
+        <item>马尔代夫           *+960  </item>
+        <item>马里               *+223  </item>
+        <item>马耳他             *+356  </item>
+        <item>马里亚那群岛       *+1670 </item>
+        <item>马提尼克           *+596  </item>
+        <item>毛里求斯           *+230  </item>
+        <item>墨西哥             *+52   </item>
+        <item>摩尔多瓦           *+373  </item>
+        <item>摩纳哥             *+377  </item>
+        <item>蒙古               *+976  </item>
+        <item>蒙特塞拉特岛       *+1664 </item>
+        <item>摩洛哥             *+212  </item>
+        <item>莫桑比克           *+258  </item>
+        <item>纳米比亚           *+264  </item>
+        <item>瑙鲁               *+674  </item>
+        <item>尼泊尔             *+977  </item>
+        <item>荷属安的列斯       *+599  </item>
+        <item>荷兰               *+31   </item>
+        <item>新西兰             *+64   </item>
+        <item>尼加拉瓜           *+505  </item>
+        <item>尼日尔             *+227  </item>
+        <item>尼日利亚           *+234  </item>
+        <item>朝鲜               *+850  </item>
+        <item>挪威               *+47   </item>
+        <item>阿曼               *+968  </item>
+        <item>巴基斯坦           *+92   </item>
+        <item>巴拿马             *+507  </item>
+        <item>巴布亚新几内亚     *+675  </item>
+        <item>巴拉圭             *+595  </item>
+        <item>秘鲁               *+51   </item>
+        <item>菲律宾             *+63   </item>
+        <item>波兰               *+48   </item>
+        <item>法属玻利尼西亚     *+689  </item>
+        <item>葡萄牙             *+351  </item>
+        <item>波多黎各           *+1787 </item>
+        <item>卡塔尔             *+974  </item>
+        <item>留尼旺             *+262  </item>
+        <item>罗马尼亚           *+40   </item>
+        <item>俄罗斯             *+7    </item>
+        <item>圣卢西亚           *+1758 </item>
+        <item>圣文森特岛         *+1784 </item>
+        <item>东萨摩亚(美)       *+684  </item>
+        <item>西萨摩亚           *+685  </item>
+        <item>圣马力诺           *+378  </item>
+        <item>圣多美和普林西比   *+239  </item>
+        <item>沙特阿拉伯         *+966  </item>
+        <item>塞内加尔           *+221  </item>
+        <item>塞舌尔             *+248  </item>
+        <item>塞拉利昂           *+232  </item>
+        <item>新加坡             *+65   </item>
+        <item>斯洛伐克           *+421  </item>
+        <item>斯洛文尼亚         *+386  </item>
+        <item>所罗门群岛         *+677  </item>
+        <item>索马里             *+252  </item>
+        <item>南非               *+27   </item>
+        <item>西班牙             *+34   </item>
+        <item>斯里兰卡           *+94   </item>
+        <item>圣卢西亚           *+1758 </item>
+        <item>圣文森特           *+1784 </item>
+        <item>苏丹               *+249  </item>
+        <item>苏里南             *+597  </item>
+        <item>斯威士兰           *+268  </item>
+        <item>瑞典               *+46   </item>
+        <item>瑞士               *+41   </item>
+        <item>叙利亚             *+963  </item>
+        <item>台湾省             *+886  </item>
+        <item>塔吉克斯坦         *+992  </item>
+        <item>坦桑尼亚           *+255  </item>
+        <item>泰国               *+66   </item>
+        <item>多哥               *+228  </item>
+        <item>汤加               *+676  </item>
+        <item>特立尼达和多巴哥   *+1809 </item>
+        <item>突尼斯             *+216  </item>
+        <item>土耳其             *+90   </item>
+        <item>土库曼斯坦         *+993  </item>
+        <item>乌干达             *+256  </item>
+        <item>乌克兰             *+380  </item>
+        <item>阿拉伯联合酋长国   *+971  </item>
+        <item>英国               *+44   </item>
+        <item>美国               *+1    </item>
+        <item>乌拉圭             *+598  </item>
+        <item>乌兹别克斯坦       *+233  </item>
+        <item>委内瑞拉           *+58   </item>
+        <item>越南               *+84   </item>
+        <item>也门               *+967  </item>
+        <item>南斯拉夫           *+381  </item>
+        <item>南非               *+27   </item>
+        <item>津巴布韦           *+263  </item>
+        <item>扎伊尔             *+243  </item>
+        <item>赞比亚             *+260  </item>
+
+    </string-array>
+
+</resources>
+

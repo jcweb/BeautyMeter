@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="leftHead"
+            type="cn.yaman.activity.HomeActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_user_ceter_head_bg"
+        android:fitsSystemWindows="true"
+        android:gravity="center_vertical"
+        android:onClick="userInfo"
+        android:paddingLeft="15dp"
+        android:paddingTop="50dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="50dp">
+
+        <cn.yaman.view.CircularImageView
+            android:id="@+id/civ_user_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_home_user_default" />
+
+        <TextView
+            android:id="@+id/tv_user_nick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/civ_user_image"
+            android:text="用户昵称"
+            android:textColor="@color/color_black_666"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:src="@mipmap/ic_home_user_arrow" />
+    </RelativeLayout>
+</layout>

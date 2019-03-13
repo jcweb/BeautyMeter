@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="cn.yaman.activity.UserLoginActivity" />
+
+        <variable
+            name="ui"
+            type="cn.yaman.activity.StartNurseActivity" />
+
+        <variable
+            name="click"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/iv_nurse_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="60dp" />
+
+        <TextView
+            android:id="@+id/tv_start_prepare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_nurse_img"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="@{click==true?@string/nurse_prepare:@string/nurse_prompt}"
+            android:textColor="@color/color_user_ceter_head_bg"
+            android:textSize="@dimen/sp_18" />
+
+
+        <TextView
+            android:id="@+id/tv_explain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_start_prepare"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="80dp"
+            android:gravity="center"
+            android:textColor="@color/color_black_333"
+            android:textSize="@dimen/sp_14"
+            android:visibility="@{click==true?View.INVISIBLE:View.VISIBLE}" />
+
+        <ImageView
+            android:id="@+id/iv_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_start_prepare"
+            android:layout_alignTop="@id/tv_explain"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_count_down_3"
+            android:visibility="@{click==false?View.INVISIBLE:View.VISIBLE}" />
+
+        <TextView
+            android:id="@+id/tv_start"
+            style="@style/button_common"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:onClick="start"
+            android:padding="10dp"
+            android:text="@string/start_prepare"
+            android:visibility="@{click==true?View.INVISIBLE:View.VISIBLE}" />
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ui"
+            type="cn.yaman.activity.HomeActivity" />
+
+        <variable
+            name="hasrecord"
+            type="Boolean" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dl_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="cn.yaman.activity.HomeActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c3b9a9"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <cn.yaman.view.CircularImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:onClick="controlDrawer"
+                    android:src="@mipmap/ic_home_user_default" />
+
+                <TextView
+                    android:id="@+id/tv_center_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="王潇"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_home_bluetooth" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/ic_home_electric" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/layout_no_device"
+                        layout="@layout/home_item_no_device"
+                        bind:has="@{hasrecord}"
+                        android:visibility="gone"
+                        bind:nodevice="@{ui}" />
+
+                    <include
+                        android:id="@+id/layout_has_device"
+                        layout="@layout/home_item_has_device"
+                        bind:has="@{hasrecord}"
+                        bind:hasdevice="@{ui}" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_container_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_home_record_item"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <include layout="@layout/home_record_head" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="5dp"
+                        android:src="@mipmap/ic_left_bottom" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start">
+
+            <include
+                android:id="@+id/left_list"
+                layout="@layout/drawer_layout_left_list"
+                bind:leftList="@{ui}" />
+        </LinearLayout>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

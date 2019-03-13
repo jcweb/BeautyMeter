@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/sp_16"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:text="@string/dialog_date_title"
+        android:gravity="center"
+        android:textColor="@color/color_black_666"
+        android:textSize="@dimen/sp_16"
+        android:layout_height="wrap_content" />
+    <cn.yaman.view.DatePicker
+        android:id="@+id/dayPicker_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></cn.yaman.view.DatePicker>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_dialog_date_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#f7f7f7"
+            android:padding="@dimen/sp_16"
+            android:text="@string/ycuwq_datepicker_cancel"
+            android:textColor="#33aaff" />
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#cccccc" />
+
+        <Button
+            android:id="@+id/btn_dialog_date_decide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#f7f7f7"
+            android:padding="@dimen/sp_16"
+            android:text="@string/ycuwq_datepicker_decide"
+            android:textColor="@color/colorDivide" />
+    </LinearLayout>
+</LinearLayout>

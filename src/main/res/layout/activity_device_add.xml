@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="ui"
+            type="cn.yaman.activity.center.DeviceAddActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/tv_device_add_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/text_device_close"
+            android:textColor="@color/color_user_ceter_head_bg"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:id="@+id/iv_device_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_device_add_title"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_device_buy"
+                style="@style/button_white_solid"
+                android:layout_marginBottom="10dp"
+                android:text="@string/text_device_buy" />
+
+            <ImageView
+                android:id="@+id/iv_device_complete_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/ic_nurse_start"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_device_match"
+                style="@style/button_common"
+                android:onClick="searchDevice"
+                android:text="@string/text_device_match" />
+
+            <TextView
+                android:id="@+id/tv_device_complete"
+                style="@style/button_common"
+                android:onClick="bindDevice"
+                android:text="@string/text_device_complete"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>
