@@ -2,21 +2,17 @@ package cn.yaman.bluetooth.device;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
-import android.bluetooth.le.ScanCallback;
-import android.bluetooth.le.ScanResult;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.ParcelUuid;
-import android.util.Log;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
+import cn.yaman.bluetooth.common.BleConfigure;
 import cn.yaman.bluetooth.device.callback.BleSatusCallBack;
 import cn.yaman.bluetooth.device.callback.ScanResultCallBack;
 import cn.yaman.bluetooth.device.receiver.BleStatusReceiver;
-import cn.yaman.util.LogUtil;
 
 /**
  * 蓝牙扫描器，单例
@@ -62,11 +58,11 @@ public class BleScanner implements BleSatusCallBack {
         mLeScanCallback = new BluetoothAdapter.LeScanCallback() {
             @Override
             public void onLeScan(final BluetoothDevice device, final int rssi, byte[] scanRecord) {
-                if (null != device.getName() && device.getName().equalsIgnoreCase("APP BLE")) {
+                if (null != device.getName() && (device.getName().equalsIgnoreCase("APP BLE")|device.getName().startsWith(BleConfigure.DEVICE_NAME))) {
                     List<ParcelUuid> list = ScanRecordUtil.parseFromBytes(scanRecord).getServiceUuids();
                     if (null != list && list.size() > 0) {
                         for (ParcelUuid uuid : list) {
-                            LogUtil.d(TAG, "uuid=" + uuid.getUuid());
+                            //TODO
                         }
                     }
                     if (null != scanResultCallBack) {

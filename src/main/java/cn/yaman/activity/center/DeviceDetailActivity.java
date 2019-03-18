@@ -68,6 +68,7 @@ public class DeviceDetailActivity extends BaseActivity<ActivityDeviceDetailBindi
                 HttpResponse response = (HttpResponse) o;
                 if (response.getResultCode() == 0) {
                     ToastUtils.toastShort(response.getResultMsg());
+                    finish();
                 }
             }
         });

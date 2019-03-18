@@ -30,29 +30,35 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/lc_ylable_max"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_weight="3"
+                        android:text="100分"
                         android:textColor="@android:color/white"
                         android:textSize="12sp"
-                        android:text="100分" />
+                        android:visibility="invisible" />
 
                     <TextView
+                        android:id="@+id/lc_ylable_mid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="6"
+                        android:text="60分"
                         android:textColor="@android:color/white"
                         android:textSize="12sp"
-                        android:text="60分" />
+                        android:visibility="invisible" />
 
                     <TextView
+                        android:id="@+id/lc_ylable_min"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:text="0分"
                         android:textColor="@android:color/white"
                         android:textSize="12sp"
-                        android:text="0分" />
+                        android:visibility="invisible" />
                 </LinearLayout>
 
                 <com.github.mikephil.charting.charts.LineChart

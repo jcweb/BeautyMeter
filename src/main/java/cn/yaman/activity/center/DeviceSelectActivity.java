@@ -43,6 +43,12 @@ public class DeviceSelectActivity extends BaseActivity<ActivityDeviceSelectBindi
         adapter = new SelectDeviceAdapter(this, list);
         adapter.setListener(this);
         getBinding().rvDeviceSelect.setAdapter(adapter);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         getDeviceList();
     }
 

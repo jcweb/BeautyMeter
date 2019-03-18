@@ -1,18 +1,14 @@
 package cn.yaman.bluetooth;
 
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import cn.yaman.bluetooth.callBack.BleDeviceStateCallBack;
 import cn.yaman.bluetooth.device.BleMessageAnalyser;
-import cn.yaman.util.LogUtil;
-import cn.yaman.util.StringUtil;
+import cn.yaman.utils.StringUtil;
 
 /**
  * 胭脂蓝牙数据解析器
- * Created by Sergio Pan on 2017/12/8.
  */
 
 public final class RougeMessageAnalyser extends BleMessageAnalyser {
@@ -41,7 +37,6 @@ public final class RougeMessageAnalyser extends BleMessageAnalyser {
 
     @Override
     protected void analyze(byte[] data) {
-        LogUtil.i(TAG, StringUtil.byteToHexStr(data));
         if (null == data) {
             return;
         }
@@ -58,7 +53,5 @@ public final class RougeMessageAnalyser extends BleMessageAnalyser {
         if (null != bleDeviceStateCallBack) {
             bleDeviceStateCallBack.onState(StringUtil.byteToInteger(bytes[0]), StringUtil.byteToInteger(bytes[1]), StringUtil.TwoByteToInteger(bytes[3], bytes[2]));
         }
-
-
     }
 }

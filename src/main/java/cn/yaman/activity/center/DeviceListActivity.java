@@ -42,6 +42,12 @@ public class DeviceListActivity extends BaseActivity<ActivityDeviceListBinding> 
         getBinding().rvDeviceList.setLayoutManager(new LinearLayoutManager(this));
         getBinding().rvDeviceList.setAdapter(adapter);
         adapter.setListener(this);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         getDeviceList();
     }
 

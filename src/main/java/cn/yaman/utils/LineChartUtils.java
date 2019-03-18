@@ -1,4 +1,4 @@
-package cn.yaman.util;
+package cn.yaman.utils;
 
 
 import android.graphics.Color;

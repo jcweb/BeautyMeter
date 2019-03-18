@@ -12,11 +12,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import cn.yaman.bluetooth.device.callback.BleSatusCallBack;
-import cn.yaman.util.LogUtil;
 
 /**
  * 蓝牙开关状态监听广播
- * Created by pan on 2018/3/26.
  */
 
 public final class BleStatusReceiver extends BroadcastReceiver {
@@ -42,7 +40,6 @@ public final class BleStatusReceiver extends BroadcastReceiver {
      * 注册监听蓝牙状态广播
      */
     public void registerBleStatusReceiver(Context context) {
-        LogUtil.i(TAG, "------registerBleStatusReceiver--front---isListeneredBleState = " + isListeneredBleState);
         if (!isListeneredBleState && context != null) {
             isListeneredBleState = true;
             IntentFilter filter = new IntentFilter();
@@ -56,7 +53,6 @@ public final class BleStatusReceiver extends BroadcastReceiver {
      * 注销监听蓝牙状态广播
      */
     public void unregisterBleStatusReceiver(Context context) {
-        LogUtil.i(TAG, "------unregisterBleStatusReceiver-----isListeneredBleState = " + isListeneredBleState);
         if (isListeneredBleState && context != null) {
             context.unregisterReceiver(instance);
             isListeneredBleState = false;
@@ -84,25 +80,21 @@ public final class BleStatusReceiver extends BroadcastReceiver {
 
             switch (blueState) {
                 case BluetoothAdapter.STATE_TURNING_ON:
-                    LogUtil.i(TAG, "BLE state receiver --- STATE_TURNING_ON");
                     for (BleSatusCallBack callBack : callbackHashMap.values()) {
                         callBack.onBleTurningOn();
                     }
                     break;
                 case BluetoothAdapter.STATE_TURNING_OFF:
-                    LogUtil.i(TAG, "BLE state receiver --- STATE_TURNING_OFF");
                     for (BleSatusCallBack callBack : callbackHashMap.values()) {
                         callBack.onBleTurningOff();
                     }
                     break;
                 case BluetoothAdapter.STATE_ON:
-                    LogUtil.i(TAG, "BLE state receiver --- STATE_ON");
                     for (BleSatusCallBack callBack : callbackHashMap.values()) {
                         callBack.onBleStateOn();
                     }
                     break;
                 case BluetoothAdapter.STATE_OFF:
-                    LogUtil.i(TAG, "BLE state receiver --- STATE_OFF");
                     for (BleSatusCallBack callBack : callbackHashMap.values()) {
                         callBack.onBleStateOff();
                     }
@@ -114,7 +106,6 @@ public final class BleStatusReceiver extends BroadcastReceiver {
         }else if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
             //蓝牙连接被切断
             BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-            LogUtil.i(TAG, "BLE state receiver --- ACTION_ACL_DISCONNECTED");
             for (BleSatusCallBack callBack : callbackHashMap.values()) {
                 callBack.onDisConnected(device);
             }

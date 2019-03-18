@@ -1,7 +1,9 @@
 package cn.yaman.activity.center;
 
+import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 
+import com.bumptech.glide.Glide;
 import com.tcl.smart.beauty.R;
 import com.tcl.smart.beauty.databinding.ActivityAboutBinding;
 
@@ -33,7 +35,7 @@ public class AboutActivity extends BaseActivity<ActivityAboutBinding> {
         getHelpContent();
     }
 
-    private void getHelpContent(){
+    private void getHelpContent() {
         HttpParams params = new HttpParams();
         HttpUtils.newRequester().post(HttpUrl.ABOUT_US, params, new YamanHttpCallback(this) {
             @Override
@@ -45,7 +47,8 @@ public class AboutActivity extends BaseActivity<ActivityAboutBinding> {
                 HttpResponse response = (HttpResponse) o;
                 if (response.getResultCode() == 0) {
                     AboutEntity aboutEntity = JsonUtils.getParam(response.getData(), AboutEntity.class);
-                    getBinding().tvAboutContent.setText(aboutEntity.getContent());
+                    getBinding().tvAboutContent.setText(Html.fromHtml(aboutEntity.getContent()));
+                    Glide.with(AboutActivity.this).load(aboutEntity.getLogo()).into(getBinding().ivLogo);
                 } else {
                     ToastUtils.toastShort(response.getResultMsg());
                 }

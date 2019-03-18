@@ -1,72 +1,13 @@
-package cn.yaman.util;
-
-import android.content.Context;
-import android.text.TextUtils;
-
-
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
+package cn.yaman.utils;
 
 /**
  * @FileName: StringUtil
  * @Dscription: 字符串工具类
- * @author: fujingqin
- * @Time: 2018/6/13 16:36
  */
 public class StringUtil {
 
-
-    public static boolean[] getSelect(String str){
-        if(TextUtils.isEmpty(str)){
-            return null;
-        }
-        boolean[] sel = new boolean[7];
-        sel[0] = str.substring(0,1).equals("1");
-        sel[1] = str.substring(1,2).equals("1");
-        sel[2] = str.substring(2,3).equals("1");
-        sel[3] = str.substring(3,4).equals("1");
-        sel[4] = str.substring(4,5).equals("1");
-        sel[5] = str.substring(5,6).equals("1");
-        sel[6] = str.substring(6).equals("1");
-
-//        boolean[] sel = new boolean[str.length()];
-//        for(int i= 0; i < str.length(); i++){
-//            if(str.substring(i,1).equals("1")){
-//                sel[i] = true;
-//            }else{
-//                sel[i] = false;
-//            }
-//        }
-        return sel;
-
-    }
-
-    /**
-     * 读取流
-     *
-     * @param inStream
-     * @return 字节数组
-     * @throws Exception
-     */
-    public static byte[] readStream(InputStream inStream) throws Exception {
-        ByteArrayOutputStream outSteam = new ByteArrayOutputStream();
-        if (null != inStream) {
-            byte[] buffer = new byte[1024];
-            int len = -1;
-            int i = 0;
-            len = inStream.read(buffer);
-            if (len != -1 && len > 0) {
-                outSteam.write(buffer, 0, len);
-            }
-            outSteam.close();
-            // inStream.close();
-        }
-        return outSteam.toByteArray();
-    }
-
     /**
      * int 转为两字节的16进制字符串
-     * Created by fWX581433 on 2018/8/3 15:26
      */
     public static String IntTo2bHexString(int num) {
         String str = "";
@@ -89,7 +30,6 @@ public class StringUtil {
 
     /**
      * int 转为1字节的16进制字符串
-     * Created by fWX581433 on 2018/8/3 15:26
      */
     public static String IntToHexString(int num) {
         String str = "";
@@ -101,29 +41,10 @@ public class StringUtil {
             default:
                 break;
         }
-        System.out.println("kkkkkkkkkkkkkk--str.toUpperCase()->"
-                + str.toUpperCase());
         return str.toUpperCase();
     }
 
-    /**
-     * CRC_XModem算法
-     * Created by fWX581433 on 2018/8/3 15:27
-     */
-    public static byte CRC_XModem(byte[] bytes) {
-//        int crc = 0x00; // initial value
-//        int polynomial = 0x1021;
-//        for (int index = 0; index < bytes.length; index++) {
-//            byte b = bytes[index];
-//            for (int i = 0; i < 8; i++) {
-//                boolean bit = ((b >> (7 - i) & 1) == 1);
-//                boolean c15 = ((crc >> 15 & 1) == 1);
-//                crc <<= 1;
-//                if (c15 ^ bit)
-//                    crc ^= polynomial;
-//            }
-//        }
-//        crc &= 0xffff;
+    public static byte xor(byte[] bytes) {
         byte csXor = 0;
         if(null!=bytes&&bytes.length>0){
 
@@ -134,6 +55,7 @@ public class StringUtil {
         }else{
             return 0;
         }
+
 
         return csXor;
     }
@@ -200,7 +122,6 @@ public class StringUtil {
 
     /**
      * 两个字节转int
-     * Created by fWX581433 on 2018/8/3 15:27
      */
     public static int TwoByteToInteger(byte b1, byte b2) {
         int humidity = 0;
@@ -210,7 +131,6 @@ public class StringUtil {
 
     /**
      * 1个字节转int
-     * Created by fWX581433 on 2018/8/3 15:27
      */
     public static int byteToInteger(byte b) {
         int value;
@@ -220,7 +140,6 @@ public class StringUtil {
 
     /**
      * int转4字节数组(高字节在前，低字节在后)
-     * Created by fWX581433 on 2018/8/3 15:30
      */
     public static byte[] IntToByteArray(int n) {
         byte[] b = new byte[4];
@@ -233,7 +152,6 @@ public class StringUtil {
 
     /**
      * 4字节数组(高字节在前，低字节在后)转int
-     * Created by fWX581433 on 2018/8/3 15:30
      */
     public static int ByteArrayToInt(byte[] bArr) {
         if (bArr.length != 4) {

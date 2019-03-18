@@ -20,7 +20,7 @@ import java.util.List;
 
 import cn.lamb.fragment.BaseFragment;
 import cn.yaman.entity.RecordMonthEntity;
-import cn.yaman.util.LineChartUtils;
+import cn.yaman.utils.LineChartUtils;
 import cn.yaman.utils.StarUtils;
 
 
@@ -39,13 +39,10 @@ public class MonthFragment extends BaseFragment<FragmentMonthBinding> {
     }
 
     public void initMain(RecordMonthEntity entity) {
-//        init();
-//        ChartUtils.initChart(getBinding().lcMonth);
 //        // 更新图表
 //        String[] xAxis = {"1", "7", "12", "18", "23", "29"};
         String[] yAxis = {"0分", "60分", "100分"};
 
-//        ChartUtils.notifyDataSetChanged(getBinding().lcMonth, getData(), xAxis);
         LineChartUtils.initChart(getBinding().lcMonth);
         List<Entry> list = setData(entity.getXyOutVoList());
         LineChartUtils.notifyDataSetChanged(getBinding().lcMonth, list, xAxis);
@@ -53,7 +50,20 @@ public class MonthFragment extends BaseFragment<FragmentMonthBinding> {
         getBinding().tvMonthDuration.setText(df.format(entity.getAveTime() / 60.0f) + "分钟");
         getBinding().tvMonthScheme.setText(entity.getScheme());
         getBinding().tvMonthProgress.setText(entity.getAveCompleteness() + "%");
+        showSore(true);
         setStar(entity.getEffact());
+    }
+
+    public void showSore(boolean flag) {
+        if (flag) {
+            getBinding().lcYlableMax.setVisibility(View.VISIBLE);
+            getBinding().lcYlableMid.setVisibility(View.VISIBLE);
+            getBinding().lcYlableMin.setVisibility(View.VISIBLE);
+        } else {
+            getBinding().lcYlableMax.setVisibility(View.INVISIBLE);
+            getBinding().lcYlableMid.setVisibility(View.INVISIBLE);
+            getBinding().lcYlableMin.setVisibility(View.INVISIBLE);
+        }
     }
 
     private List<Entry> setData(List<RecordMonthEntity.XyOutVoList> list) {

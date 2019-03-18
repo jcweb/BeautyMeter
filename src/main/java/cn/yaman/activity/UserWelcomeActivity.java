@@ -7,8 +7,8 @@ import com.tcl.smart.beauty.R;
 
 import cn.lamb.activity.BaseActivity;
 import cn.lamb.base.util.ToastUtils;
-import cn.yaman.util.PermissionUtils;
 import cn.yaman.utils.LanguageUtils;
+import cn.yaman.utils.PermissionUtils;
 
 /**
  * 欢迎页面

@@ -1,6 +1,5 @@
-package cn.yaman.util;
+package cn.yaman.utils;
 
-import android.Manifest;
 import android.Manifest.permission;
 import android.app.Activity;
 import android.content.pm.PackageManager;
@@ -15,13 +14,13 @@ public class PermissionUtils {
 
     //权限
     private static String[] PERMISSIONS_STORAGE = {
-            Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS,
-            Manifest.permission.READ_PHONE_STATE,
-            Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.SYSTEM_ALERT_WINDOW,
+            permission.READ_EXTERNAL_STORAGE,
+            permission.WRITE_EXTERNAL_STORAGE,
+            permission.ACCESS_FINE_LOCATION,
+            permission.ACCESS_LOCATION_EXTRA_COMMANDS,
+            permission.READ_PHONE_STATE,
+            permission.ACCESS_COARSE_LOCATION,
+            permission.SYSTEM_ALERT_WINDOW,
             permission.CAMERA
     };
     private static List<String> mPermissionList = new ArrayList<>();

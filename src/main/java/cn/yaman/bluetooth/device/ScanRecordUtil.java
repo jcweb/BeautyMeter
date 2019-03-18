@@ -17,7 +17,6 @@ import java.util.UUID;
 import androidx.annotation.Nullable;
 
 /**
- * Created by  Huanglinqing on 2018/9/4/004.
  */
 
 public class ScanRecordUtil {

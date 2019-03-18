@@ -35,6 +35,7 @@
                 android:orientation="horizontal">
 
                 <cn.yaman.view.CircularImageView
+                    android:id="@+id/iv_home_icon"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:onClick="controlDrawer"
@@ -80,8 +81,8 @@
                     <include
                         android:id="@+id/layout_no_device"
                         layout="@layout/home_item_no_device"
-                        bind:has="@{hasrecord}"
                         android:visibility="gone"
+                        bind:has="@{hasrecord}"
                         bind:nodevice="@{ui}" />
 
                     <include

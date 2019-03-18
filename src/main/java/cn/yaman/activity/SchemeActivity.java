@@ -22,6 +22,7 @@ import cn.lamb.http.HttpParams;
 import cn.yaman.Constants.HttpUrl;
 import cn.yaman.core.CommonTitlebarStrategy;
 import cn.yaman.entity.SchemeEntity;
+import cn.yaman.entity.SelectDeviceEntity;
 import cn.yaman.http.HttpResponse;
 import cn.yaman.http.HttpUtils;
 import cn.yaman.http.YamanHttpCallback;
@@ -29,7 +30,7 @@ import cn.yaman.utils.JsonUtils;
 import cn.yaman.utils.TimeUtils;
 
 public class SchemeActivity extends BaseActivity<ActivitySchemeBinding> {
-    int deviceId;
+    private SelectDeviceEntity deviceEntity;
 
     @Override
     public int bindContentView() {
@@ -39,7 +40,7 @@ public class SchemeActivity extends BaseActivity<ActivitySchemeBinding> {
     @Override
     public void onProcessor() {
         initTitlebar();
-        deviceId=getIntent().getIntExtra("deviceId", 0);
+        deviceEntity = (SelectDeviceEntity) getIntent().getSerializableExtra("deviceEntity");
         getSchemeList();
     }
 
@@ -101,7 +102,7 @@ public class SchemeActivity extends BaseActivity<ActivitySchemeBinding> {
             public void onClick(View v) {
                 Intent intent = new Intent(SchemeActivity.this, SchemeDetailActivity.class);
                 intent.putExtra("schemeEntity", entity);
-                intent.putExtra("deviceId", deviceId);
+                intent.putExtra("deviceId", deviceEntity.getModel());
                 startActivity(intent);
             }
         });

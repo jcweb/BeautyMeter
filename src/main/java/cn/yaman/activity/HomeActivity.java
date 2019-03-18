@@ -52,7 +52,7 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding> {
     private int deviceId = 0;
     //记录用户首次点击返回键的时间
     private long firstTime = 0;
-
+    private SelectDeviceEntity deviceEntity;
     @Override
     public int bindContentView() {
         return R.layout.activity_home;
@@ -74,6 +74,7 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding> {
         ImageView icon = getBinding().leftList.leftHead.civUserImage;
         if (!TextUtils.isEmpty(userEntity.getUser().getIconUrl())) {
             Glide.with(this).load(userEntity.getUser().getIconUrl()).into(icon);
+            Glide.with(this).load(userEntity.getUser().getIconUrl()).into(getBinding().ivHomeIcon);
         }
         getBinding().dlHome.setDrawerListener(listener);
     }
@@ -96,11 +97,11 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding> {
                 }
                 HttpResponse response = (HttpResponse) o;
                 if (response.getResultCode() == 0) {
-                    SelectDeviceEntity entity = JsonUtils.getParam(response.getData(), SelectDeviceEntity.class);
-                    if (entity != null && !TextUtils.isEmpty(entity.getSimageUrl())) {
+                    deviceEntity = JsonUtils.getParam(response.getData(), SelectDeviceEntity.class);
+                    if (deviceEntity != null && !TextUtils.isEmpty(deviceEntity.getSimageUrl())) {
                         getBinding().setHasrecord(true);
-                        Glide.with(HomeActivity.this).load(entity.getSimageUrl()).into(getBinding().layoutHasDevice.ivDeviceSign);
-                        getRecentlyRecord(entity.getId());
+                        Glide.with(HomeActivity.this).load(deviceEntity.getSimageUrl()).into(getBinding().layoutHasDevice.ivDeviceSign);
+                        getRecentlyRecord(deviceEntity.getId());
                     }
                 } else {
                     ToastUtils.toastShort(response.getResultMsg());
@@ -215,7 +216,7 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding> {
     /*模式选择*/
     public void selectScheme(View view) {
         Intent intent = new Intent(this, SchemeActivity.class);
-        intent.putExtra("deviceId", deviceId);
+        intent.putExtra("deviceEntity", deviceEntity);
         startActivity(intent);
     }
 
@@ -239,9 +240,9 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding> {
                 initUserInfo();
             } else if (requestCode == TYPE_DEVICE_SELECT) {
                 getBinding().setHasrecord(true);
-                SelectDeviceEntity entity = (SelectDeviceEntity) data.getSerializableExtra("deviceEntity");
-                Glide.with(HomeActivity.this).load(entity.getSimageUrl()).into(getBinding().layoutHasDevice.ivDeviceSign);
-                getRecentlyRecord(entity.getId());
+                 deviceEntity = (SelectDeviceEntity) data.getSerializableExtra("deviceEntity");
+                Glide.with(HomeActivity.this).load(deviceEntity.getSimageUrl()).into(getBinding().layoutHasDevice.ivDeviceSign);
+                getRecentlyRecord(deviceEntity.getId());
             }
         }
     }

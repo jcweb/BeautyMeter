@@ -28,11 +28,13 @@ import cn.yaman.dialog.NameEditDialog;
 import cn.yaman.dialog.NameEditDialog.OnNameSetListener;
 import cn.yaman.dialog.SexDialog;
 import cn.yaman.dialog.SexDialog.OnSexSelectedListener;
+import cn.yaman.entity.UploadEntity;
 import cn.yaman.entity.UserEntity;
 import cn.yaman.entity.UserEntity.UserBean;
 import cn.yaman.http.HttpResponse;
 import cn.yaman.http.HttpUtils;
 import cn.yaman.http.YamanHttpCallback;
+import cn.yaman.utils.JsonUtils;
 import cn.yaman.utils.PathUtils;
 import cn.yaman.utils.PreferenceUtils;
 
@@ -43,6 +45,7 @@ public class UserCenterActivity extends BaseActivity<ActivityUserCenterBinding> 
     private static String DATE_FORMAT = "yyyy-MM-dd";
     private UserEntity userEntity;
     private static final int REQUEST_ALBUM = 0x02;
+    private UploadEntity uploadEntity;
 
     @Override
     public int bindContentView() {
@@ -154,6 +157,9 @@ public class UserCenterActivity extends BaseActivity<ActivityUserCenterBinding> 
             params.put("birthdayLong", time);
             params.put("height", strHeight);
             params.put("id", userEntity.getUser().getId());
+            if (uploadEntity != null && !TextUtils.isEmpty(uploadEntity.getUrl())) {
+                params.put("iconUrl", uploadEntity.getUrl());
+            }
             HttpUtils.newRequester().post(HttpUrl.USER_MODIFY, params, new YamanHttpCallback(this) {
                 @Override
                 public void onSuccess(String url, @Nullable Object o) {
@@ -168,6 +174,7 @@ public class UserCenterActivity extends BaseActivity<ActivityUserCenterBinding> 
                         userBean.setName(strNick);
                         userBean.setBirthday(strDate);
                         userBean.setId(userEntity.getUser().getId());
+                        userBean.setIconUrl(uploadEntity.getUrl());
                         userEntity.setUser(userBean);
                         PreferenceUtils.getInstance().setUserEntity(userEntity);
                         setResult(RESULT_OK);
@@ -189,7 +196,7 @@ public class UserCenterActivity extends BaseActivity<ActivityUserCenterBinding> 
 
     /*上传头像*/
     public void uploadIcon(String imageUrl) {
-        HttpUtils.newRequester().uploadFile(HttpUrl.RECORD_LIST, imageUrl, new YamanHttpCallback() {
+        HttpUtils.newRequester().uploadFile(HttpUrl.IMAGE_UPLOAD, imageUrl, new YamanHttpCallback() {
             @Override
             public void onSuccess(String url, @Nullable Object o) {
                 super.onSuccess(url, o);
@@ -199,7 +206,7 @@ public class UserCenterActivity extends BaseActivity<ActivityUserCenterBinding> 
                 HttpResponse response = (HttpResponse) o;
                 LogUtils.e(response.getData());
                 if (response.getResultCode() == 0) {
-                    ToastUtils.toastShort(response.getResultMsg());
+                    uploadEntity = JsonUtils.getParam(response.getData(), UploadEntity.class);
                     Glide.with(UserCenterActivity.this).load(imageUrl).into(getBinding().ivCenterImage);
                 }
             }
